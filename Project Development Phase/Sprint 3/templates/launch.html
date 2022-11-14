@@ -1,0 +1,35 @@
+{%extends "layout.html"%}
+
+{%block head%}
+  <link rel="stylesheet" href="{{url_for('static', filename='launch_style.css')}}">
+  <script src="{{url_for('static', filename='launch.js')}}" defer></script>
+{%endblock head%}
+
+{%block body%}
+<p class="title animated fadeIn">Natural Disaster Intensity Analysis and Classification using Artificial Intelligence<p>
+<div class="container1 animated fadeIn">
+  <div class="wrapper1">
+     <div class="image">
+        <img src="" alt="">
+     </div>
+     <div class="content">
+        <div class="icons">
+           <i class="fas fa-photo-video i2"></i>
+        </div>
+        <div class="text1">
+           No file chosen, yet!
+        </div>
+     </div>
+     <div id="cancel-btn">
+        <i class="fas fa-times i1"></i>
+     </div>
+     <div class="file-name">
+        File name here
+     </div>
+  </div>
+  <button onclick="defaultBtnActive()" id="custom-btn">
+    upload any image or video feed
+    <i class="fas fa-cloud-upload-alt i2"></i></button>
+  <input id="default-btn" type="file" hidden>
+</div>
+{%endblock body%}
