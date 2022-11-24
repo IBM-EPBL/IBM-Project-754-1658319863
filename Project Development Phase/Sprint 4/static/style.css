@@ -1,0 +1,170 @@
+header{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url('https://source.unsplash.com/1600x900/?natural-disaster');
+    font-size: 120%;
+  }
+  
+  .card {
+    background: #373c56;
+    color: white;
+    padding: 3em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 10vh;
+    margin-left: 6vw;
+   
+ }
+
+  .animated{
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+}
+
+.main_content {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 17%;
+}
+
+.top_title {
+  display:inline-block;
+  color: #cbfff5;
+  padding-left: 10px;
+}
+
+
+@-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+     }
+     
+     @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+     }
+     
+     .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+     }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #05b7642b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 30px);
+  }
+  
+  .btn:hover {
+    background: #a4f9066b;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  .button {
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    background: #009578;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin:auto;
+  }
+  
+  .button:hover {
+    background: #eb7609;
+  }
+  
+  .button:active {
+    background: #f00629;
+  }
+  
+  .button__text,
+  .button__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  
