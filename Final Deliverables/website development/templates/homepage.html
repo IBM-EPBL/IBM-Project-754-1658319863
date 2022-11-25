@@ -1,0 +1,115 @@
+{%extends "layout.html"%}
+
+{%block head%}
+  <link rel="stylesheet" href="{{url_for('static', filename='homestyle.css')}}">
+{%endblock head%}
+
+{%block body%}
+    <div style="display: flex;" class="animated fadeIn">
+      <div>
+        <div class="img-slider">
+          <div class="slide active">
+            <img src="https://cdn.britannica.com/48/123848-050-92824F8A/Cyclone-Catarina-International-Space-Station-Brazil-March-2004.jpg" alt="">
+            <div class="info text">
+              <h2>Cyclone</h2>
+              <p>A Powerful Storm containing Strong Winds, Brings heavy Rains and Thunderstorms.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/causes-of-earthquakes.jpg" alt="">
+            <div class="info text">
+              <h2>Earthquake</h2>
+              <p>A Sudden Violent shaking of the ground due to movement and Collision of Techtonic Plates.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://images.all-free-download.com/images/graphiclarge/flood_danube_sandbag_266488.jpg" alt="">
+            <div class="info text">
+              <h2>Flood</h2>
+              <p>The Overflow of water onto the normal lands often due to Heavy Rains and Clogged Drainage system.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://cdn.theatlantic.com/media/img/photo/2022/07/photos-wildfires-rage-across-southw/a01_1241970129/main_1500.jpg" alt="">
+            <div class="info text">
+              <h2>Wildfire</h2>
+              <p>The Phenomenon of forest vegetations catching fire due to Greenhouse effect or man-made effects.</p>
+            </div>
+          </div>
+          
+          <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sideinfo">
+        <p>
+        The World is prone to a lot of Natural and <br>Man-made Calamities, and the ones sliding beside are significant enough in causing huge damages.
+        <br><br>
+        Want to get known about the type of Natural Disaster forming in your Area?
+        <br><br>
+        Get the Detailed Weather Forecast for all parts of the world?
+        <br><br>
+        <b>Well, This is a Hub specifically meant for You !</b></p>
+      </p>
+      </div>
+    </div>
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 4000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+{%endblock body%}
+      
