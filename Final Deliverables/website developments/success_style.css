@@ -1,0 +1,59 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1603484477859-abe6a73f9366?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+    background-size:cover;
+    place-items: center;
+    text-align: center;
+    display: grid;
+    height: 100%;
+}
+
+.block{
+background: linear-gradient(135deg,#1c1d1e 0%,#16020e 100%);        border-radius: 10px;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+width: 100%;
+max-width: 1000px;
+max-height:fit-content;
+margin-top: 5vh;
+margin-left: 2vw;
+    
+}
+
+.title{
+color: rgb(226, 12, 12);
+font-size: 30px;
+font-weight: 100px;
+border-radius: 15px;
+margin-top: 3%;
+border-color: rgba(50, 3, 14, 0.286);
+border-width: 5px 5px 5px 5px;
+border-style:groove;
+}
+.animated{
+-webkit-animation-duration: 0.8s;
+animation-duration: 1.2s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+.fadeIn {
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
+}
+.uptexts{
+color: rgb(236, 236, 225);
+font-size: 25px;
+font-weight: 20px;
+text-align:justify;
+text-transform: capitalize;
+padding: 2%;
+}
