@@ -1,0 +1,39 @@
+{%extends "layout.html"%}
+
+{%block head%}
+  <link rel="stylesheet" href="{{url_for('static', filename='intro_style.css')}}">
+{%endblock head%}
+
+{%block body%}
+<div>
+    <div class="block animated fadeIn text">
+        <div>
+            <p>
+                China, India and United States tend to be the most affected by Natural Disasters. These disasters can wreck havoc and
+                even end the lives of those who stand in their way. However, The Geographical location where people live mostly decides the extent
+                that its residents get affected by Disasters.
+            </p>
+            <br>
+            <p>
+                This Web App is built with the objective of Detecting and Alerting the Public about the Type of Disaster.
+                Upload an Image or a Video Feed captured or obtained, and this data is fed to a Trained CNN Model.
+                The Deep Learning Model predicts the type of Natural Disaster among Cyclone, Earthquake, Flood, Wildfire, and 
+                alerts it to the user.
+            </p>
+           
+        </div>
+    </div>
+    <div class="animated fadeIn text">
+    <img src="static\Blank diagram.png"/>
+    </div>
+    <div class="block animated fadeIn text">
+        The Team :
+        Raakesh Kumar C 
+        Sangamithra S 
+        Meena Kaveri R 
+        Sakkeel Magdum M
+       
+    </div>
+</div>
+{%endblock body%}
+
